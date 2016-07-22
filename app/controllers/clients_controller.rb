@@ -10,6 +10,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @client = Client.find(params[:id])
   end
 
   # GET /clients/new
@@ -69,6 +70,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :email, :duration, :address, :phone, :comments)
+      params.require(:client).permit(:name, :email, :phone, :password, :password_confirmation)
     end
 end
