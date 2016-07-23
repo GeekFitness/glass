@@ -9,6 +9,7 @@ class CreateClients < ActiveRecord::Migration[5.0]
       t.text :comments
 
       t.timestamps
+
     end
   end
 end
