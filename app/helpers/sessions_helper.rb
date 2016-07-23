@@ -14,4 +14,9 @@ module SessionsHelper
     !current_client.nil?
   end
 
+    def log_out
+    session.delete(:client_id)
+    @current_client = nil
+  end
+
 end
